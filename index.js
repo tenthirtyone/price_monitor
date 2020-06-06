@@ -17,6 +17,8 @@ class PriceMonitor {
   }
 
   async start() {
+    console.log(await this.db.getPrice("Coinbase", "BTC", new Date()));
+
     this.getPrices();
 
     setInterval(() => {
