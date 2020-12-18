@@ -28,6 +28,9 @@ class PriceMonitor {
 
   async getPrices() {
     const timestamp = new Date();
+    const day = timestamp.getDate();
+    const month = timestamp.getMonth();
+    const year = timestamp.getFullYear();
 
     this.coinbase.getPrices(timestamp);
     this.binance.getPrices(timestamp);
